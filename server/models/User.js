@@ -15,17 +15,22 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  googleId: {
+    type: String,
+    unique: true, // Ensure that the Google ID is unique
+    sparse: true  // Allows for null values, accommodating users who don't sign up with Google
+  },
   password: {
     type: String,
-    required: true
+    required: false // Make the password not required as Google users won't have one
   },
   num_telephone: {
     type: String,
-    required: true
+    required: false,
   },
   cin: {
     type: String,
-    required: true,
+    required: false,
     unique: true
   },
   role: {
