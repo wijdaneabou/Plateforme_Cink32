@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* apply style*/
+.apply{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161922; 
+  color: white; 
   padding: 2rem;
-  text-align: center;
+  border-radius: 0.5rem;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  
+  .apply-content {
+    width: 50%;
+    padding-right: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .title {
+    color: #007EB0; 
+    margin-bottom: 5px; 
+    font-size: 1rem;
+    font-weight: bold; 
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .buttons {
+    margin-top: 20px;
   }
-}
+  
+  .explore-button {
+    background-color: #007EB0; 
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    text-transform: uppercase; 
+    font-weight: bold; 
+    border-radius: 0.25rem; 
+  }
+  .join-button {
+    background-color: transparent; 
+    color: #007EB0; 
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.25rem; 
+  }
 
-.card {
-  padding: 2em;
-}
+  
+  .explore-button:hover {
+    background-color: darken(#007EB0, 10%); 
+  }
+  .join-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .image-container {
+    width: 50%;
+  }
+  
+  .image-container img {
+    width: 100%; 
+  }
 
-.read-the-docs {
-  color: #888;
-}
+  /*customer style*/
+
+  .customer {
+    background-color: #161922; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .customer-items {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .item {
+    background-color: #000000; 
+    padding: 15px;
+    border-radius: 5px; 
+    width: 30%; 
+  }
+  
+  .stars {
+    color: #FFD700; 
+    margin-bottom: 10px;
+  }
+  
+  .author {
+    display: block;
+    color: #aaa; 
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  
