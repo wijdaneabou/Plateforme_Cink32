@@ -3,7 +3,7 @@ const Customer = () => {
     return ( 
         <div className="customer">
             <div className="customer-content">
-                <h1 className="header">Customer Testimoniais</h1>
+                <h2 className="header">Customer Testimoniais</h2>
                 <h6 className="title">What Our Members Say</h6>
 
                 <div className="customer-items">
@@ -11,22 +11,38 @@ const Customer = () => {
                     {/* Client Item 1 */}
                     <div className="item">
                         <div className="stars">★★★★★</div>
-                        <p>"CINK has transformed my career and opened new doors."</p>
-                        <span className="author">- Jane Doe, Developer at ABC Corp</span>
+                        <p className="customer-text">"CINK has transformed my career and opened new doors."</p>
+                        <div className="item-author">
+                            <img src="/profile-icon.webp" alt="profilIcon" className="author-avatar" />
+                            <span className="author-name">John Doe</span>
+                            <span className="author-position">- Developer at ABC Corp</span>
+                        </div>
+                        
                     </div>
 
                     {/* Client Item 2 */}
                     <div className="item">
                         <div className="stars">★★★★★</div>
-                        <p>"The workshops provided valuable hands-on experience."</p>
-                        <span className="author">- John Smith, Product Manager at XYZ Inc.</span>
+                        <p className="customer-text">"The workshops provided valuable hands-on experience."</p>
+                        <div className="item-author">
+                            <img src="/profile-icon.webp" alt="profilIcon" className="author-avatar" />
+                            <span className="author-name">John Smith</span> 
+                            <span className="author-position">- Product Manager at XYZ Inc.</span>
+
+                        </div>
+                        
                     </div>
 
                     {/* Client Item 3 */}
                     <div className="item">
                         <div className="stars">★★★★★</div>
-                        <p>"The community has been incredibly supportive and inspiring."</p>
-                        <span className="author">- Max Johnson, Marketing Manager at EFG Ltd.</span>
+                        <p className="customer-text">"The community has been incredibly supportive and inspiring."</p>
+                        <div className="item-author">
+                            <img src="/profile-icon.webp" alt="profilIcon" className="author-avatar" />
+                            <span className="author-name">John Smith</span>
+                            <span className="author-position">- Marketing Manager at EFG Ltd.</span>
+                        </div>
+                        
                     </div>
 
                 </div>

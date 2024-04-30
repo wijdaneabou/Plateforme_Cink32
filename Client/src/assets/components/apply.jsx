@@ -5,7 +5,7 @@ const Apply = () => {
             <div className="apply-content">
 
                 <h6 className="title">Empowerment</h6>
-                <h1>Unlock Your Potential with CINK's Innovative Offerings</h1>
+                <h2>Unlock Your Potential with CINK's Innovative Offerings</h2>
                 <p>Discover a world of digital possibilities with CINK's comprehensive courses, 
                 interactive workshops, and vibrant community. Join us to gain the skills, 
                 knowledge, and connections needed to thrive in the tech industry.</p>
@@ -13,7 +13,7 @@ const Apply = () => {
                
                 <div className="buttons">
                     <button className="explore-button">Explore</button>
-                    <button className="joun-button">Join  </button>
+                    <button className="joun-button">Join</button>
                 </div>
 
             </div>

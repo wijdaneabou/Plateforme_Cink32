@@ -58,24 +58,31 @@
   
   
   .image-container {
-    width: 50%;
+    width: 40%;
+    flex-shrink: 0;
+    margin-left: auto;
+
   }
   
   .image-container img {
-    width: 100%; 
+    width: 100%;
+    height: auto; 
   }
 
   /*customer style*/
 
   .customer {
-    background-color: #161922; /* Dark background */
-    color: #fff; /* White text */
+    background-color: #161922; 
+    color: #fff; 
     padding: 20px;
     text-align: center;
   }
   
   .header {
     margin-bottom: 20px;
+  }
+  .title{
+    margin-bottom: 40px;
   }
   
   .customer-items {
@@ -87,19 +94,97 @@
     background-color: #000000; 
     padding: 15px;
     border-radius: 5px; 
+    text-align: left;
     width: 30%; 
   }
   
   .stars {
     color: #FFD700; 
     margin-bottom: 10px;
+    display: inline-block;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+  }
+  .customer-text {
+    text-align: left;
   }
   
-  .author {
-    display: block;
-    color: #aaa; 
-    font-style: italic;
-    margin-top: 10px;
+  .item-author{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left; 
   }
+  .author-avatar {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    margin-right: 10px; 
+  }
+  .author-name {
+    font-size: 0.9rem; 
+    font-weight: bold;
+    text-align: left; 
+  }
+  
+  .author-position {
+    font-size: 0.8rem; 
+    color: #aaa; 
+    text-align: left;
+  }
+  /*partners style*/
+  .partners-content {
+    max-width: 600px; 
+    margin: auto;
+    text-align: center;
+  }
+  
+  
+  
+  .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-control-left,
+  .carousel-control-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000; 
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .carousel-control-left {
+    left: 10px;
+  }
+  
+  .carousel-control-right {
+    right: 10px;
+  }
+  
+  .logos {
+    white-space: nowrap;
+  }
+  
+  .logos > div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px; 
+    margin: 10px;
+    padding: 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  
+  .carousel-control-left:hover,
+  .carousel-control-right:hover {
+    background-color: #333; 
+  }
+  
+
   
   
