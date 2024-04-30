@@ -1,6 +1,6 @@
 /* apply style*/
 .apply{
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #161922; 
@@ -134,12 +134,12 @@
   }
   /*partners style*/
   .partners-content {
-    max-width: 600px; 
+    max-width: 5000px; 
     margin: auto;
     text-align: center;
+    background-color: #161922; /* Couleur de fond mise à jour */
+  
   }
-  
-  
   
   .carousel {
     position: relative;
@@ -183,6 +183,72 @@
   .carousel-control-left:hover,
   .carousel-control-right:hover {
     background-color: #333; 
+  }
+
+  /*education style*/
+
+  .education-content {
+    background-color: #161922;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+  
+    h1 {
+      margin-bottom: 20px;
+    }
+  
+    .sections {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+  
+      .section {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        img {
+          height: 200px; 
+          width: 100%;
+          object-fit: cover; 
+        }
+  
+        .title_u {
+          font-size: larger;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+  
+        p {
+          text-align: center;
+        }
+      }
+    }
+  
+    .buttons {
+      margin-top: 20px;
+  
+      .button, .learn-more {
+        background-color: #007EB0;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-right: 10px;
+        text-decoration: none;
+  
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+  
+      .learn-more {
+        background-color: transparent; 
+      }
+    }
   }
   
 
