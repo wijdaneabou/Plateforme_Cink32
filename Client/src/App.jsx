@@ -27,16 +27,16 @@ useEffect(() => {
 
   return (
     <>
-    <div className="app-container">
+   
      <Router>
       <Routes>
         <Route exact path="/" element={<HeroSection />} />
         <Route exact path="/navbar" element={<HeaderSection />} />
         <Route exact path="/Signup" element={<Form />} />
-        <Route path='/404' element={<Err />} />
+        <Route path='/test' element={<Discover />} />
       </Routes>
     </Router>
-    </div>
+
     </>
   )
 }

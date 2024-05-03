@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types'; 
 import '../styles/DiscoverPage.scss';
-import '../App.css';
+import '../styles/App.css';
 import img1 from '../assets/img1.png';
 import img2 from '../assets/img2.jpeg';
 import img3 from '../assets/img3.jpeg';
