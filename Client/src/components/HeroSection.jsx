@@ -2,6 +2,7 @@ import React from "react";
 import background from '../assets/background.png';
 import HeaderSection from "./HeaderSection";
 import '../styles/index.css';
+import About from "./About";
 export default function HeroSection () {
   return (
       <>
@@ -23,6 +24,7 @@ export default function HeroSection () {
         
         </div>
         </div>
+        <About />
       </>
     );
 };
