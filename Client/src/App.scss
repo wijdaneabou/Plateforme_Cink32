@@ -1,0 +1,256 @@
+/* apply style*/
+.apply{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161922; 
+  color: white; 
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+  
+  
+  .apply-content {
+    width: 50%;
+    padding-right: 20px;
+  }
+  .title {
+    color: #007EB0; 
+    margin-bottom: 5px; 
+    font-size: 1rem;
+    font-weight: bold; 
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .explore-button {
+    background-color: #007EB0; 
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    text-transform: uppercase; 
+    font-weight: bold; 
+    border-radius: 0.25rem; 
+  }
+  .join-button {
+    background-color: transparent; 
+    color: #007EB0; 
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.25rem; 
+  }
+
+  
+  .explore-button:hover {
+    background-color: darken(#007EB0, 10%); 
+  }
+  .join-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .image-container {
+    width: 40%;
+    flex-shrink: 0;
+    margin-left: auto;
+
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto; 
+  }
+
+  /*customer style*/
+
+  .customer {
+    background-color: #161922; 
+    color: #fff; 
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  .title{
+    margin-bottom: 40px;
+  }
+  
+  .customer-items {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .item {
+    background-color: #000000; 
+    padding: 15px;
+    border-radius: 5px; 
+    text-align: left;
+    width: 30%; 
+  }
+  
+  .stars {
+    color: #FFD700; 
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+  }
+  .customer-text {
+    text-align: left;
+  }
+  
+  .item-author{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left; 
+  }
+  .author-avatar {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    margin-right: 10px; 
+  }
+  .author-name {
+    font-size: 0.9rem; 
+    font-weight: bold;
+    text-align: left; 
+  }
+  
+  .author-position {
+    font-size: 0.8rem; 
+    color: #aaa; 
+    text-align: left;
+  }
+  /*partners style*/
+  .partners-content {
+    max-width: 5000px; 
+    margin: auto;
+    text-align: center;
+    background-color: #161922; /* Couleur de fond mise à jour */
+  
+  }
+  
+  .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-control-left,
+  .carousel-control-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000; 
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .carousel-control-left {
+    left: 10px;
+  }
+  
+  .carousel-control-right {
+    right: 10px;
+  }
+  
+  .logos {
+    white-space: nowrap;
+  }
+  
+  .logos > div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px; 
+    margin: 10px;
+    padding: 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  
+  .carousel-control-left:hover,
+  .carousel-control-right:hover {
+    background-color: #333; 
+  }
+
+  /*education style*/
+
+  .education-content {
+    background-color: #161922;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+  
+    h1 {
+      margin-bottom: 20px;
+    }
+  
+    .sections {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+  
+      .section {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        img {
+          height: 200px; 
+          width: 100%;
+          object-fit: cover; 
+        }
+  
+        .title_u {
+          font-size: larger;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+  
+        p {
+          text-align: center;
+        }
+      }
+    }
+  
+    .buttons {
+      margin-top: 20px;
+  
+      .button, .learn-more {
+        background-color: #007EB0;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-right: 10px;
+        text-decoration: none;
+  
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+  
+      .learn-more {
+        background-color: transparent; 
+      }
+    }
+  }
+  
+
+  
+  
