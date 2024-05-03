@@ -1,9 +1,9 @@
 
-import Err from './404'
-import Form from  "./SignUp";
+import Err from './components/404'
+import Form from  "./components/SignUp";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HeroSection from './HeroSection';
-import HeaderSection from './HeaderSection';
+import HeroSection from './components/HeroSection';
+import HeaderSection from './components/HeaderSection';
 function App() {
  
 

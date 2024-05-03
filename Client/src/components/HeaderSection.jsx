@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./assets/Logo_off.png"
-
+import logo from "../assets/Logo_off.png"
+import '../styles/index.css';
 export default function HeaderSection () {
   return (
     <div className="header-section">

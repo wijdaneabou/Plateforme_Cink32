@@ -1,8 +1,9 @@
 import React ,{useState} from 'react'
-import './Form.css';
-import img from './assets/img.jpeg';
-import Logo from './assets/Logo.png'
-import GoogleIcon from './assets/google.png'; 
+import '../styles/Form.css';
+import '../styles/index.css';
+import img from '../assets/img.jpeg';
+import Logo from '../assets/Logo.png'
+import GoogleIcon from '../assets/google.png'; 
 import GoogleButton from './GoogleButton'
 export default function Form() {
   const [successMessage, setSuccessMessage] = useState('');
