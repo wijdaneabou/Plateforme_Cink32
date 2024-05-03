@@ -1,0 +1,50 @@
+.about {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    @media (max-width: 768px) {
+      padding: 60px 20px;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  .about h1 {
+    margin-right: 500px; 
+    margin-left: 150px; 
+    width: 587px;
+    height: 144px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+  
+    .first-letter-blue {
+      color: #0563AC;
+    }
+  
+    @media (max-width: 768px) {
+      font-size: 28px;
+      margin-right: 0; 
+      margin-left: 0; 
+      margin-bottom: 20px;
+    }
+  }
+  
+  .about p {
+    font-family: 'Inter';
+    font-style: normal;
+    max-width: 780px;
+    margin: 0 auto;
+    height: 176px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 24px;
+  
+    @media (max-width: 768px) {
+      font-size: 16px;
+      max-width: none; 
+    }
+  }
+  
