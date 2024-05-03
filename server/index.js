@@ -1,36 +1,38 @@
 const express = require('express'); // the app instance here guys 
 require('dotenv').config();// we use  dotenv to store our environment variables.
 const mongoose = require('mongoose');
-const User = require('./models/User'); 
-
+const cors = require('cors');
+const bodyParser = require("body-parser");
+const authRoutes = require('./routes/googleRoutes');
+const usersRoutes = require('./routes/usersRoutes');
+const passportSetup = require('./config/passport-setup');
+const session = require('express-session'); 
 const app = express();
-app.use(express.json());
-//all this just for testing if you wanna test the insert of the user in the database use postman to send the post request
-// Get the home page
-app.get('/', (req, res) => {
-  res.send("This is the home page");
-});
+app.use(bodyParser.json());
+// we gonna use session just temporary because the jwt will be handled by the other team NADIN
+app.use(session({
+  secret: '123',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } 
+}));
+//the cors policy
+const corsOptions = {
+    origin: 'http://localhost:5173',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  };
 
-// Create a new user (POST request to /test) Modify each time these informations if you wanna test the insert 
-app.post('/test', async (req, res) => {
-  try {
-    const newUser = new User({
-        nom: 'John Doe',
-        prenom: 'Doe',
-        email: 'johndoe@example.com',
-        password: 'password123',
-        num_telephone: '0123456789',
-        cin: '1234567890',
-        role: 'user'
-    });
+app.use(cors(corsOptions));
+app.use('/auth', authRoutes);
+app.use('/', usersRoutes);
+app.use(passportSetup.initialize());
+app.use(passportSetup.session());
 
-    const savedUser = await newUser.save(); // here we save the  user to the database
-    res.json({ message: 'User created successfully!', user: savedUser });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: 'Error creating user' }); // test message
-  }
-});
+
+
+
 
 // Connect to MongoDB using async/await for cleaner handling  of asynchronous code
 // the async/await is the best for handling these types of tasks

@@ -1,0 +1,51 @@
+.about {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   bottom: 12px;
+    @media (max-width: 768px) {
+      padding: 60px 20px;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  .about h1 {
+  
+    margin-left: 50px; 
+    width: 307px;
+    height: 144px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 48px;
+  
+    .first-letter-blue {
+      color: #0563AC;
+    }
+  
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-right: 0; 
+      margin-left: 0; 
+      margin-bottom: 20px;
+    }
+  }
+  
+  .about p {
+    font-family: 'Inter';
+    font-style: normal;
+    max-width: 780px;
+    height: 176px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24px;
+    margin-top: 65px;
+    margin-right: 20px;
+  
+    @media (max-width: 768px) {
+      font-size: 16px;
+      max-width: none; 
+    }
+  }
+  
