@@ -189,7 +189,7 @@ h1 {
   position: fixed; /* Changed from absolute to fixed */
   width: 100%; /* Ensure it spans the full width */
   top: 0;
-  z-index: 10; 
+  z-index: 1000; 
 }
 
 .header-section .overlap {
@@ -197,6 +197,7 @@ h1 {
   align-items: center;
   position: absolute;
   top: 16px;
+  z-index: 10; 
 }
 
 .header-section .logo-white-svg {

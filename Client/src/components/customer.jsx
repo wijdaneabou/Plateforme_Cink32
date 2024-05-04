@@ -1,3 +1,4 @@
+import '../styles/Latest.scss';
 const Customer = () => {
 
     return ( 

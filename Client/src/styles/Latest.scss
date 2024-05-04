@@ -1,24 +1,31 @@
 /* apply style*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+  font-family: "Inter", sans-serif;
+}
 .apply{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #161922; 
-  color: white; 
+  background-color: white; 
+  color: black; 
   padding: 2rem;
   border-radius: 0.5rem;
+  font-family: "Inter", sans-serif;
 }
   
   
   .apply-content {
     width: 50%;
     padding-right: 20px;
+    font-family: "Inter", sans-serif;
   }
   .title {
-    color: #007EB0; 
+
     margin-bottom: 5px; 
     font-size: 1rem;
     font-weight: bold; 
+    font-family: "Inter", sans-serif;
   }
   
   .buttons {
@@ -26,35 +33,24 @@
   }
   
   .explore-button {
-    background-color: #007EB0; 
+    background-color: #0563AC; 
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 1.5rem;
     margin-right: 1rem;
     cursor: pointer;
     text-transform: uppercase; 
     font-weight: bold; 
-    border-radius: 0.25rem; 
+
+    font-family: "Inter", sans-serif;
   }
-  .join-button {
-    background-color: transparent; 
-    color: #007EB0; 
-    border: none;
-    font-size: 1rem;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 0.25rem; 
-  }
+
 
   
   .explore-button:hover {
     background-color: darken(#007EB0, 10%); 
   }
-  .join-link:hover {
-    text-decoration: underline;
-  }
+
   
   
   .image-container {
@@ -72,7 +68,7 @@
   /*customer style*/
 
   .customer {
-    background-color: #161922; 
+    background-color: white; 
     color: #fff; 
     padding: 20px;
     text-align: center;
@@ -80,9 +76,11 @@
   
   .header {
     margin-bottom: 20px;
+    color: #064576;
   }
   .title{
     margin-bottom: 40px;
+    color: black;
   }
   
   .customer-items {
@@ -188,11 +186,12 @@
   /*education style*/
 
   .education-content {
-    background-color: #161922;
-    color: #fff;
+    background-color: white;
+    color: black;
     padding: 20px;
     min-height: 100vh;
     text-align: center;
+    font-family: "Inter", sans-serif;
   
     h1 {
       margin-bottom: 20px;
@@ -203,11 +202,10 @@
       justify-content: space-around;
       padding: 20px;
   
-      .section {
+      .sect {
         width: 30%;
         display: flex;
         flex-direction: column;
-        align-items: center;
   
         img {
           height: 200px; 
@@ -217,12 +215,14 @@
   
         .title_u {
           font-size: larger;
+          font-family: "Inter", sans-serif;
           font-weight: bold;
           margin-top: 20px;
         }
   
         p {
           text-align: center;
+          font-family: "Inter", sans-serif;
         }
       }
     }
@@ -231,10 +231,11 @@
       margin-top: 20px;
   
       .button, .learn-more {
-        background-color: #007EB0;
+        background-color: #0563AC;
+        font-family: "Inter", sans-serif;
         color: #fff;
         border: none;
-        padding: 10px 20px;
+        padding: 20px;
         font-size: 16px;
         cursor: pointer;
         margin-right: 10px;
@@ -247,6 +248,8 @@
   
       .learn-more {
         background-color: transparent; 
+        color: black;
+        font-family: "Inter", sans-serif;
       }
     }
   }

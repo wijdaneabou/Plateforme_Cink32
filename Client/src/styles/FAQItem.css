@@ -1,0 +1,139 @@
+/* Styles généraux pour les items FAQ */
+/* Styles généraux pour l'item FAQ */
+.faq-item {
+    
+    width: 150%;
+    color: #f2f2f2;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #000000;
+    
+    background-color: #6EA7BE;
+  }
+  
+  /* Styles spécifiques pour le premier item FAQ */
+  .first-item {
+    border-color: #000000; /* Bordure spécifique pour le premier item */
+    background-color: #0563AC; /* Fond spécifique pour le premier item */
+  }
+  .last-item{
+    color: #000000;
+    border-color: #000000; /* Bordure spécifique pour le premier item */
+    background-color: #ffffff;
+
+  }
+  
+  
+  
+  /* Styles pour l'en-tête de l'item FAQ qui sera dynamique */
+  .faq-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Ajoute des styles spécifiques pour chaque en-tête basés sur la classe dynamique */
+  .header-0 {
+    background-color: #064576; /* Par exemple, bleu clair pour la première FAQ */
+  }
+  
+  .header-1 {
+    background-color: rgb(0, 0, 0); /* Vert clair pour la deuxième, etc. */
+  }
+  
+  .header-2 {
+    background-color: rgb(0, 0, 0);
+  }
+  /* Styles pour le bouton 'Contact' */
+  .contact-button {
+   
+    margin-right: 700px;
+    background-color: #0563AC; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 12px 24px; /* Rembourrage autour du texte pour agrandir le bouton */
+    font-size: 15px; /* Taille du texte du bouton */
+    border: none; /* Aucune bordure pour un aspect moderne */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    cursor: pointer; /* Changement de curseur pour indiquer qu'il est cliquable */
+    text-transform: uppercase; /* Texte en majuscules pour une apparence distinctive */
+    font-weight: bold; /* Texte en gras */
+    letter-spacing: 1px; /* Espacement entre les lettres pour une meilleure lisibilité */
+    outline: none; /* Suppression de l'outline pour l'esthétique */
+    transition: background-color 0.3s, transform 0.2s; /* Animation de fond et d'effet de pression */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre portée pour un effet de profondeur */
+    display: inline-block; /* Pour permettre l'utilisation de margin auto si nécessaire */
+  }
+  
+  .contact-button:hover {
+    background-color: #03497E; /* Couleur de fond plus foncée au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée plus grande au survol */
+  }
+  
+  .contact-button:active {
+    transform: translateY(2px); /* Effet de pression lors du clic */
+  }
+  
+  /* Si le bouton est un lien (<a>), tu voudras peut-être réinitialiser les styles par défaut */
+  .contact-button:link,
+  .contact-button:visited {
+    text-decoration: none; /* Pas de soulignement du texte */
+    color: white; /* Couleur du texte */
+  }
+  
+  /* ... et ainsi de suite pour chaque FAQItem que tu pourrais avoir */
+  
+  /* Plus de styles pour la question, le bouton de bascule, et la réponse */
+  /* ... */
+  .toggle-button {
+    background-color: #fff; /* Couleur de fond du bouton */
+    color: #0563AC; /* Couleur du signe + */
+    font-size: 24px; /* Taille du signe + */
+    line-height: 24px; /* Hauteur de ligne pour centrer le signe + verticalement */
+    text-align: center; /* Centre le signe + horizontalement */
+    width: 35px; /* Largeur du bouton */
+    height: 35px; /* Hauteur du bouton */
+    border-radius: 2%; /* Rend le bouton rond */
+    display: flex; /* Utilise flexbox pour centrer le contenu */
+    align-items: center; /* Centre le contenu verticalement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    border: 2px solid #0563AC; /* Bordure du bouton */
+    cursor: pointer; /* Indique que le bouton est cliquable */
+    transition: background-color 0.3s, color 0.3s; /* Transition pour l'effet au survol */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Ombre portée pour le bouton */
+    outline: none; /* Supprime l'outline quand le bouton est cliqué ou sélectionné */
+  }
+  
+  .toggle-button:hover {
+    background-color: #0563AC; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du signe + au survol */
+  }
+  
+  /* Style quand le FAQ est ouvert et que le signe doit être un moins (-) */
+  .faq-item.open .toggle-button {
+    background-color: #0563AC; /* Couleur de fond pour l'état ouvert */
+    color: #fff; /* Couleur du signe pour l'état ouvert */
+  }
+  
+  .faq-item.open .toggle-button:hover {
+    background-color: #03497E; /* Couleur de fond au survol pour l'état ouvert */
+  }
+  .faq-item {
+    position: relative; /* Position relative pour le conteneur de l'élément FAQ */
+    /* Autres styles... */
+  }
+  
+  .faq-question {
+    /* Assure-toi que .faq-question remplit l'élément .faq-item */
+    width: 100%;
+    /* Autres styles... */
+  }
+  
+  .toggle-button {
+    position: absolute; /* Position absolue pour positionner le bouton */
+    top: 10px; /* 10px du haut de l'élément conteneur */
+    right: 10px; /* 10px de la droite de l'élément conteneur */
+    /* Autres styles... */
+  }
+  
+  

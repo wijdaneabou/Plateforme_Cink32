@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.footer {
+  
+    background-color: #ffffff; /* Couleur de fond du pied de page */
+    color: #0563AC; /* Couleur du texte */
+
+  }
+  
+  .footer-bottom {
+    height: 5px;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Espace entre les sections */
+   
+    margin: 0 auto; /* Centrer le contenu dans la page */
+    padding: 0 20px; /* Padding horizontal, ajuste selon tes besoins */
+  }
+  
+  .footer-section {
+    font-family: "Inter", sans-serif;
+    margin-right: 250px;
+    color: #064576;
+    flex: 1; /* Chaque section prend une part égale de l'espace */
+    padding: 0 20px; /* Padding autour de chaque section, ajuste selon tes besoins */
+  }
+  .footer-section h2, .footer-section h3 {
+    color: #0563AC; /* Couleur pour les en-têtes */
+  }
+  
+  .footer-section ul {
+    font-size: 16px;
+
+    color: #333;
+    padding: 0; /* Retire le padding par défaut */
+  }
+  
+  .footer-section ul li a {
+    margin-right: -222px;
+  
+    text-decoration: none; /* Retire le soulignement des liens */
+  }
+  
+  .footer-section input[type="email"] {
+    width: 200px;
+    background-color: #E7ECEE;
+    margin: 10px 0; /* Espace autour de l'input */
+    border: 1px solid #E7ECEE; /* Bordure de l'input */
+   color: black;
+  }
+  
+  .footer-section button {
+    background-color: #0563AC; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Padding du bouton */
+    border: none; /* Pas de bordure du bouton */
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    cursor: pointer; /* Curseur de pointeur pour le bouton */
+  }
+  
+  .footer-section button:hover {
+    background-color: #03497E; /* Couleur de fond du bouton au survol */
+  }
+  
+  .footer-bottom {
+    text-align: center; /* Centre le texte de la partie inférieure du pied de page */
+    margin-top: 20px; /* Espace au-dessus de la partie inférieure */
+  }
+  
+  .footer-bottom a {
+    color: #064576;
+    text-decoration: none;
+    padding: 0 10px;
+    font-weight: 600;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline; /* Soulignement au survol pour les liens */
+  }
+ .facebook{
+    width: 40px;
+ }
+ .cink{
+    width: 100px;
+ }
+ .MAIL{
+    width: 60%; /* Utilise toute la largeur de son conteneur */
+    max-width: 400px; /* Définit une largeur maximale si nécessaire */
+    padding: 10px;
+    margin: 10px 0; /* Espace autour de l'input */
+
+ }
+ .email-subscribe {
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 10px; /* Espace entre le champ email et le bouton */
+  }
+  
+  .email-input {
+    flex-grow: 1; /* Permet au champ email d'occuper tout l'espace disponible */
+    padding: 10px;
+  }
+
+  
+  /* Ajoute :hover, :active, :focus styles si nécessaire */
+
+    
+    hr {
+        border: none; /* Retire la bordure par défaut */
+        height: 1px; /* Définit la hauteur de la ligne */
+        background-color: #0563AC; /* Applique la couleur de fond */
+        margin: 20px 0; /* Ajoute un peu d'espacement avant et après la ligne */
+      }
+      .footer-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Assure-toi que le contenu se wrappe s'il n'entre pas sur une seule ligne */
+        gap: 10px; /* Espacement entre les éléments */
+        text-align: center;
+        padding: 10px 0; /* Ajuste le padding vertical pour plus d'espace */
+      }
+      
+      .footer-bottom p, .footer-bottom a {
+        margin: 0; /* Enlève les marges par défaut des paragraphes et des liens */
+        padding: 0; /* Enlève le padding par défaut si présent */
+      }
+      
+      /* Pour éviter que les liens se trouvent sur une nouvelle ligne sur des écrans étroits */
+      @media (min-width: 768px) {
+        .footer-bottom {
+          flex-wrap: nowrap; /* Empêche le contenu de passer à la ligne suivante */
+        }
+      }
+      .footer-bottom {
+       
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+      }
+      
+      .footer-left, .footer-right {
+        
+        display: flex;
+      }
+      
+      .footer-left {
+        color: #0563AC;
+        justify-content: flex-start;
+      }
+      
+      .footer-right {
+        
+        justify-content: flex-end;
+      }
+      
+      .footer-bottom p, .footer-bottom a {
+        color: #0563AC;
+        margin: 0;
+        padding: 0 10px; /* Ajoute un peu d'espace entre les liens */
+      }
+      
+      /* Assure-toi que le footer prend toute la largeur si tu n'as pas déjà une règle pour cela */
+
+
+ul li::before {
+  content: "•"; /* Ajoute un point comme contenu avant chaque élément de liste */
+ 
+  display: inline-block; /* Affiche le point en tant qu'élément en ligne */
+  width: 1em; /* Espace suffisant pour le point */
+  margin-left: -1em; /* Négatif margin pour aligner les points avec le texte */
+}
+
+ul li {
+  padding: 5px 0; /* Espacement vertical pour chaque élément de liste */
+}
+
+ul li a {
+  color: #333; /* Couleur des liens */
+  text-decoration: none; /* Enlève le soulignement */
+}
+.footer-section-icons{
+    margin-left: 50px;
+    margin-top: -45px;
+}
+.footer-section-icons h3{
+  margin-left: -12px;
+}
+  

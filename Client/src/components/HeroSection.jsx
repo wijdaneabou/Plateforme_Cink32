@@ -1,8 +1,13 @@
 import React from "react";
 import background from '../assets/background.png';
 import HeaderSection from "./HeaderSection";
+import Apply from './apply'
+import Customer from './customer'
+import Education from './education'
+import FAQPage from './FAQPage';
 import '../styles/index.css';
 import About from "./About";
+import Footer from "./Footer";
 export default function HeroSection () {
   return (
       <>
@@ -25,6 +30,11 @@ export default function HeroSection () {
         </div>
         </div>
         <About />
+        <Education />
+        <Apply />
+        <Customer />
+        <FAQPage />
+        <Footer />
       </>
     );
 };

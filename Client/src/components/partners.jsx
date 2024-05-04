@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import '../styles/Latest.scss';
 const logos = [
     { id: 1, name: 'Relume', src: '/relume-logo.png' },
     { id: 2, name: 'VISA', src: '/visa_logo.png' },
