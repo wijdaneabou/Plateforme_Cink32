@@ -186,12 +186,15 @@ h1 {
 /* Header The navBar */
 .header-section {
   height: 88px;
-  position: fixed; /* Changed from absolute to fixed */
+  position: absolute; /* Changed from absolute to fixed */
   width: 100%; /* Ensure it spans the full width */
   top: 0;
-  z-index: 1000; 
+  z-index: 10; 
 }
-
+.header-section .scrolled {
+  background-color: white; /* Change to white when scrolled */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow when scrolled */
+}
 .header-section .overlap {
   display: flex;
   align-items: center;
@@ -296,13 +299,9 @@ h1 {
 }
 /*          */
 
-
-
 .item-link {
   margin-right: 1.5rem; /* Adjusted for better scaling */
 }
-
-
 
 /* Media query for tablets */
 @media (max-width: 768px) {

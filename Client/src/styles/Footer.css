@@ -1,45 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 .footer {
-  
     background-color: #ffffff; /* Couleur de fond du pied de page */
     color: #0563AC; /* Couleur du texte */
-
   }
-  
+
   .footer-bottom {
     height: 5px;
   }
   .footer-content {
     display: flex;
     justify-content: space-between; /* Espace entre les sections */
-   
     margin: 0 auto; /* Centrer le contenu dans la page */
     padding: 0 20px; /* Padding horizontal, ajuste selon tes besoins */
   }
   
   .footer-section {
     font-family: "Inter", sans-serif;
-    margin-right: 250px;
     color: #064576;
     flex: 1; /* Chaque section prend une part égale de l'espace */
     padding: 0 20px; /* Padding autour de chaque section, ajuste selon tes besoins */
+    padding-bottom: 150px;
   }
   .footer-section h2, .footer-section h3 {
     color: #0563AC; /* Couleur pour les en-têtes */
+    
   }
   
   .footer-section ul {
-    font-size: 16px;
-
+    font-size: 14px;
     color: #333;
-    padding: 0; /* Retire le padding par défaut */
+    margin-left: 120px;
+
   }
   
   .footer-section ul li a {
-    margin-right: -222px;
-  
-    text-decoration: none; /* Retire le soulignement des liens */
+ text-decoration: none; /* Retire le soulignement des liens */
   }
   
   .footer-section input[type="email"] {
@@ -184,7 +180,7 @@ ul li a {
 }
 .footer-section-icons{
     margin-left: 50px;
-    margin-top: -45px;
+    margin-top: -15px;
 }
 .footer-section-icons h3{
   margin-left: -12px;
