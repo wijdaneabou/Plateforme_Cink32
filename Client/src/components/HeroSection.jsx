@@ -8,6 +8,7 @@ import FAQPage from './FAQPage';
 import '../styles/index.css';
 import About from "./About";
 import Footer from "./Footer";
+import Partners from './partners';
 export default function HeroSection () {
   return (
       <>
@@ -31,6 +32,7 @@ export default function HeroSection () {
         </div>
         <About />
         <Education />
+      
         <Apply />
         <Customer />
         <FAQPage />
