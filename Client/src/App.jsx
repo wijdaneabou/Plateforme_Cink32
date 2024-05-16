@@ -1,11 +1,11 @@
-import  { useState, useEffect } from 'react';
-import Err from './components/404'
+//import  { useState, useEffect } from 'react';
+//import Err from './components/404'
 import Form from  "./components/SignUp";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import './styles/App.css';
 function App() {
-const [isDarkMode, setIsDarkMode] = useState(false);
+/*const [isDarkMode, setIsDarkMode] = useState(false);
 
 const toggleDarkMode = () => {
   setIsDarkMode(!isDarkMode);
@@ -20,7 +20,7 @@ useEffect(() => {
     }
   };
   updateTheme();
-}, [isDarkMode]);
+}, [isDarkMode]);*/
 
   return (
     <>
