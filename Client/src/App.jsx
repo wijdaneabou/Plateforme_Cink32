@@ -1,9 +1,10 @@
 //import  { useState, useEffect } from 'react';
 //import Err from './components/404'
-import Form from  "./components/SignUp";
+//import Form from  "./components/SignUp";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HeroSection from './components/HeroSection';
-import './styles/App.css';
+//import HeroSection from './components/HeroSection';
+import Header from './components/Admin/Header.jsx';
+//import './styles/App.css';
 function App() {
 /*const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -27,8 +28,7 @@ useEffect(() => {
    
      <Router>
       <Routes>
-        <Route exact path="/" element={<HeroSection />} />
-        <Route exact path="/Signup" element={<Form />} />
+        <Route exact path="/" element={<Header />} />
       </Routes>
     </Router>
 
