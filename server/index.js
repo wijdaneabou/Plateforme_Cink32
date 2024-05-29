@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const authRoutes = require('./routes/googleRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 const passportSetup = require('./config/passport-setup');
+const eventsRouter =require('./Routes/Admin/EventRouter');
 const session = require('express-session'); 
 const app = express();
 app.use(bodyParser.json());
@@ -27,8 +28,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use('/auth', authRoutes);
 app.use('/', usersRoutes);
+app.use('/api/events', eventsRouter);
 app.use(passportSetup.initialize());
 app.use(passportSetup.session());
+
 
 
 

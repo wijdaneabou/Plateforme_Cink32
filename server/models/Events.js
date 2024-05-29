@@ -1,5 +1,11 @@
 const mongoose = require('mongoose');
 
+const photoSchema = new mongoose.Schema({
+    data: Buffer,
+    contentType: String,
+    originalName: String,
+  });
+
 const eventSchema = new mongoose.Schema({
     name:{ 
         type: String,
@@ -21,10 +27,8 @@ const eventSchema = new mongoose.Schema({
         type: String, 
         required: true
     },
-    photos: { 
-        type: [String],
-        required: true  
-    },
+    photos: [photoSchema],
+    
     participantNumber:{ 
         type: Number, 
         required: true 
@@ -36,7 +40,8 @@ const eventSchema = new mongoose.Schema({
     status:{
         type: String,
         default:'pending'
-    }
+    },
+    participants: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
   });
 
 module.exports = mongoose.model('Event', eventSchema);

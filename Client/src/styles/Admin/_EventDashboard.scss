@@ -1,0 +1,322 @@
+// EventDashboard.scss
+body{
+    background-color: #F5F6FA;
+}
+.App {
+    display: flex;
+    flex-direction: column;
+   
+    main {
+      flex: 1;
+      margin-left: 15%;
+      margin-top: 7%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+     
+  
+      .head-bar{
+        display: flex;
+        justify-content: space-between;
+        background-color: #F5F6FA;
+        align-items: center;  
+        margin-left: 1.9%;
+      
+  
+        h1 {
+            margin: 0;
+        }
+  
+        button {
+          padding: 10px 20px;
+          border: none;
+          width: 204px;
+          height: 64px;
+          margin-right: 20px;
+          border-radius: 5px;
+          background-color: #204C9F;
+          color: white;
+          cursor: pointer;
+          font-size: 18px;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.2s linear;
+
+          &:before {
+            content: "\f061"; /* Unicode for right arrow in FontAwesome */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.2s linear;
+          }
+             
+  
+          &:hover {
+            text-indent: -20px;
+            
+            &:before {
+              opacity: 1;
+              text-indent: 0px;
+            }
+          }
+  
+        }
+      }
+      .filter-bar {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        background-color: #f2f2f2;
+        padding: 12px 20px;
+        border-radius: 20px;
+        margin-top: 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 34vw;
+        margin-left: 10px;
+      }
+      .filter-icon {
+        margin-right: 10px;
+        font-size: 1.2em;
+      }
+      .filter-separator {
+        width: 1px;
+        height: 24px;
+        background-color: #ccc;
+        margin: 0 10px;
+      }
+      .filter-bar label {
+        margin-right: 10px;
+        font-weight: 600;
+      }
+
+      .filter-bar select,
+      .filter-bar input {
+        margin-right: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    
+  
+      .reset-button {
+        display: flex;
+        align-items: center;
+        border: none;
+        color: #d41e1e;
+        font-size: 1em;
+        cursor: pointer;
+        
+        &:hover {
+      
+          color: #570606;
+        }
+
+       svg {
+          margin-right: 10px;
+        }
+    
+        
+      }
+  
+      table {
+        margin-left: 12px;
+        margin-top: 3%;
+        width: calc(100% - 30px);
+        border-radius: 10px;
+        overflow: hidden;
+        border-collapse: collapse;
+        background-color: white;
+        table-layout: fixed;
+       
+
+        th, td {
+          border: 1px solid #ddd;
+          padding: 35px;
+          text-align: center;
+          border-right: 1px solid #ddd;
+          border-left: 1px solid #ddd;
+        }
+        th,
+        td {
+            border-right: none;
+            border-left: none;
+
+            }
+        
+  
+        th {
+          background-color: #eeeff5;
+          height: 0.5px;
+        }
+        .status {
+            padding: 12px 0px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+           
+          
+            &.completed {
+              background-color: #E6FAF5;
+              color: #00B37E;
+            }
+          
+            &.pending {
+              background-color: #F0F4FF;
+              color: #204C9F;
+            }
+          
+            &.ongoing {
+              background-color: #FFF7E6;
+              color: #D97706;
+            }
+          }
+    
+        button {
+          padding: 5px 16px;
+          width: 48px;
+          height: 30px;
+          border: none;
+          margin-left:10px;
+          border-radius: 5px;
+          color: white;
+          cursor: pointer;
+        }
+      }
+      
+      .delete-button {
+        background-color: #FFEBEE;
+        color: #C62828;
+      }
+      .edit-button{
+        background-color: #F0F4FF;
+         color: #204C9F;
+      }
+    }
+  }
+
+  
+  @media (max-width: 992px) {
+    .App main {
+      margin-left: 5%;
+      margin-top: 3%;
+      padding: 15px;
+    }
+  
+    .App main .head-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 0;
+    }
+  
+    .App main .head-bar button {
+      width: 160px;
+      height: 50px;
+      font-size: 14px;
+      margin-right: 0;
+      margin-top: 10px;
+    }
+  
+    .App main .filter-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      padding: 10px;
+      margin-top: 30px;
+    }
+  
+    .App main .filter-bar label,
+    .App main .filter-bar select,
+    .App main .filter-bar button {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 10px;
+    }
+  
+    table th, table td {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .App main {
+      margin-left: 0;
+      margin-top: 2%;
+    }
+  
+    .App main .head-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .App main .head-bar h1 {
+      font-size: 24px;
+    }
+  
+    .App main .head-bar button {
+      width: 140px;
+      height: 45px;
+      font-size: 12px;
+    }
+  
+    .App main .filter-bar {
+      width: 80%;
+    }
+    table{
+      width: 50%;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+   
+    }
+  
+    table th, table td {
+      padding: 15px;
+    
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .App main .head-bar h1 {
+      font-size: 20px;
+    }
+  
+    .App main .head-bar button {
+      width: 120px;
+      height: 40px;
+      font-size: 10px;
+    }
+  
+    .App main .filter-bar {
+      padding: 8px;
+    }
+  
+    .App main .filter-bar label,
+    .App main .filter-bar select,
+    .App main .filter-bar button {
+      font-size: 12px;
+    }
+    table{
+      width: 20%;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+   
+    }
+  
+    table th, table td {
+      padding: 10px;
+    }
+  }

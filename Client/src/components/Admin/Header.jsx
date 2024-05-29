@@ -9,13 +9,17 @@ import { BsBook, BsClipboard2, BsPower } from 'react-icons/bs';
 import { VscCalendar, VscDashboard } from "react-icons/vsc";
 import { LuUser2 } from "react-icons/lu";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
-import { US, FR ,MA} from 'country-flag-icons/react/3x2';
+import { US, FR, MA } from 'country-flag-icons/react/3x2';
 import '../../styles/Admin/_Header.scss';
 import logo from '../../assets/cink.png';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({ selectedLanguage, onLanguageChange }) => {
     const [showProfileDetails, setShowProfileDetails] = useState(false); 
     const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+    const { t } = useTranslation(); 
+    const navigate = useNavigate(); // Replace useHistory with useNavigate
 
     const toggleSidebar = () => {
         setIsSidebarCollapsed(!isSidebarCollapsed);
@@ -23,7 +27,7 @@ const Header = ({ selectedLanguage, onLanguageChange }) => {
 
     const languages = [
         { code: 'en', label: 'English', flag: <US className="flag-icon" /> },
-        { code: 'fr', label: 'Français', flag: <FR className="flag-icon"/> },
+        { code: 'fr', label: 'Français', flag: <FR className="flag-icon" /> },
         { code: 'ma', label: 'Marocain', flag: <MA className="flag-icon" /> },
     ];
 
@@ -41,19 +45,24 @@ const Header = ({ selectedLanguage, onLanguageChange }) => {
         setShowProfileDetails(!showProfileDetails); 
     };
 
+    const handleLogout = () => {
+        // Redirect the user to the home page on logout
+        navigate("/");
+    };
+
     return (
         <div>
             <div className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
                 <img src={logo} alt="Logo" className={`logo ${isSidebarCollapsed ? 'small-logo' : ''}`} />
                 <div className="menu">
                     <ul>
-                        <li><a href="#home" className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}> <span><VscDashboard /></span><span className="text">Dashboard</span></a></li>
-                        <li><a href="#home" className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><LuUser2 /></span> <span className="text">Admins</span></a></li>
-                        <li><a href="#home" className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><HiOutlineChatBubbleLeftRight /></span><span className="text">Reports</span></a></li>
-                        <li><a href="#home" className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><BsBook /></span><span className="text">Courses</span></a></li>
-                        <li><a href="#home" className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span> <VscCalendar /></span><span className="text">Events</span></a></li>
-                        <li><a href="#home" className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><BsClipboard2 /></span><span className="text">To-Do</span></a></li>
-                        <div className='logout'><a className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><BsPower/></span><span className="text">Logout</span></a></div>
+                        <li><a onClick={() => navigate("/")} className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}> <span><VscDashboard /></span><span className="text">{t('dashboard')}</span></a></li>
+                        <li><a onClick={() => navigate("/admins")} className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><LuUser2 /></span> <span className="text">Admins</span></a></li>
+                        <li><a onClick={() => navigate("/reports")} className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><HiOutlineChatBubbleLeftRight /></span><span className="text">Reports</span></a></li>
+                        <li><a onClick={() => navigate("/courses")} className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><BsBook /></span><span className="text">Courses</span></a></li>
+                        <li><a onClick={() => navigate("/events")} className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><VscCalendar /></span><span className="text">Events</span></a></li>
+                        <li><a onClick={() => navigate("/todo")} className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><BsClipboard2 /></span><span className="text">To-Do</span></a></li>
+                        <div className='logout'><a onClick={handleLogout} className={`link ${isSidebarCollapsed ? 'hidden' : ''}`}><span><BsPower /></span><span className="text">Logout</span></a></div>
                     </ul>
                 </div>
             </div>
@@ -81,15 +90,15 @@ const Header = ({ selectedLanguage, onLanguageChange }) => {
                     </div>
                     {showProfileDetails && (
                         <div className='profile-details'>
-                            <a href="/manage-account" className='profile-option'>
+                            <a onClick={() => navigate("/manage-account")} className='profile-option'>
                                 <FaUserCog className="icon manage-account-icon" />
                                 <span>Manage Account</span>
                             </a>
-                            <a href="/change-password" className='profile-option'>
+                            <a onClick={() => navigate("/change-password")} className='profile-option'>
                                 <FaKey className="icon change-password-icon" />
                                 <span>Change Password</span>
                             </a>
-                            <a href="/logout" className='profile-option'>
+                            <a className='profile-option' onClick={handleLogout}>
                                 <FaSignOutAlt className="icon logout-icon" />
                                 <span>Log out</span>
                             </a>

@@ -3,7 +3,11 @@
 //import Form from  "./components/SignUp";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import HeroSection from './components/HeroSection';
-import Header from './components/Admin/Header.jsx';
+import Dashboard from './components/Admin/Dashboard.jsx';
+import EventDashboard from './components/Admin/EventDashboard.jsx';
+import AddNewEvent from './components/Admin/AddNewEvent.jsx';
+
+
 //import './styles/App.css';
 function App() {
 /*const [isDarkMode, setIsDarkMode] = useState(false);
@@ -23,18 +27,16 @@ useEffect(() => {
   updateTheme();
 }, [isDarkMode]);*/
 
+
   return (
-    <>
-   
-     <Router>
+    <Router>
       <Routes>
-        <Route exact path="/" element={<Header />} />
+        <Route exact path="/" element={<Dashboard />} />
+        <Route path="/events" element={<EventDashboard />} />
+        <Route path="/addevent" element={<AddNewEvent />} />
       </Routes>
     </Router>
-
-    </>
-  )
+  );
 }
 
-export default App
-
+export default App;

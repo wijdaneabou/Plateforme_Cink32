@@ -1,0 +1,51 @@
+.dashboard-card {
+    background: #fff;
+    border-radius: 10px;
+    width: 283px;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; 
+
+    .card-header {
+        display: flex;
+        justify-content: space-between; /* Les éléments seront répartis horizontalement avec un espace entre eux */
+        align-items: center;
+        margin-bottom: 10px;
+        color: #202224;
+        .icon-container {
+            background: #f0f4f8; /* Background color for the icon */
+            padding: 15px;
+            border-radius: 40%; /* Make it circular */
+            display: flex;
+            margin-right: 10px;
+
+            svg {
+                font-size: 22px;
+                color: #555; /* Color of the icon */
+            }
+        }    
+        
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .card-value {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-change {
+        font-size: 14px;
+        &.positive {
+            color: #00b37e;
+        }
+        &.negative {
+            color: #e53935;
+        }
+    }
+}
