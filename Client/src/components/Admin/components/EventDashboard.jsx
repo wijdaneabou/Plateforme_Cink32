@@ -4,8 +4,7 @@ import { FaEdit, FaTrash, FaRedo, FaFilter } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import AddNewEvent from './AddNewEvent';
-import '../../styles/Admin/_EventDashboard.scss';
-
+import '../styles/_EventDashboard.scss';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale'; 
 
@@ -129,7 +128,7 @@ function EventDashboard() {
         ) : (
           <>
             <div className="head-bar">
-              <h1>Événements</h1>
+              <h2>Événements</h2>
               <button className='effect' onClick={handleCreateEvent}>
                 Create Event
               </button>

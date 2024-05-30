@@ -1,0 +1,172 @@
+
+
+// Styles pour la page des événements
+.events-page {
+
+  .events-header {
+    background-color: #0563AC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+
+    h1 {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 0.1px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+  }
+
+  //  liste des événements
+  .event-list {
+    padding: 4.5%;
+
+    .event {
+      display: flex;
+      margin-bottom: 90px;
+
+      .image {
+        width: 80vh;
+        height: 400px;
+        margin-right: 40px;
+        border-radius: 8px;
+      }
+
+      .details {
+        flex: 1;
+        padding: 23px;
+
+        h2 {
+          margin-top: 0;
+          font-size: 18px;
+          color: #0563AC;
+        }
+
+        p {
+          margin-bottom: 50px; 
+          line-height: 1.9;   
+          font-size: 15px;
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+
+          button {
+            margin-left: 14px;
+            width: 175px;
+            height: 51px;
+            border: none;
+            border-radius: 10px; 
+            cursor: pointer;
+            font-size: 13px;
+            transition: background-color 0.3s, color 0.3s;
+
+            &.participate {
+              background-color: #0563AC;
+              color: #fff;
+              border: 2px solid transparent;
+
+              &:hover {
+                background-color: #517aa6;
+                color: #fff;
+              }
+            }
+
+            &.read-more {
+              background-color: white;
+              color: #0563AC;
+              border: 2px solid #0563AC;
+
+              &:hover {
+                background-color: #0563AC;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //  l'événement inversé
+    .event.reverse {
+      flex-direction: row-reverse;
+
+      .image {
+        margin-right: 0;
+        margin-left: 30px;
+      }
+
+      .buttons {
+        justify-content: centre;
+      }
+    }
+  }
+
+  //  la pagination
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .page-number,
+    .previous,
+    .next {
+      margin: 0 5px;
+      padding: 8px 15px;
+      border: none;
+      font-size: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &.active {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      &:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 15px 20px; /* Espacement interne */
+    border-radius: 5px; /* Bord arrondi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre */
+    z-index: 1000; /* Pour s'assurer que la notification est au-dessus de tout */
+    animation: slideIn 0.5s ease forwards, fadeOut 0.5s ease 2.5s forwards; /* Animation */
+  }
+  
+  /* Animation pour faire glisser la notification et la faire disparaître */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+}

@@ -7,6 +7,8 @@ const authRoutes = require('./routes/googleRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 const passportSetup = require('./config/passport-setup');
 const eventsRouter =require('./Routes/Admin/EventRouter');
+const eventspageRouter=require('./Routes/EventsPageRouter');
+const dashRouter=require('./Routes/Admin/DashboardRouter')
 const session = require('express-session'); 
 const app = express();
 app.use(bodyParser.json());
@@ -29,10 +31,29 @@ app.use(cors(corsOptions));
 app.use('/auth', authRoutes);
 app.use('/', usersRoutes);
 app.use('/api/events', eventsRouter);
+app.use('/api/eventspage', eventspageRouter);
+app.use('/api', dashRouter);
 app.use(passportSetup.initialize());
 app.use(passportSetup.session());
 
+const hardcodedUser = {
+  email: 'test@example.com',
+  password: 'password123', // In a real-world scenario, never store passwords in plain text
+  name: 'Test User',
+  id: 1
+};
 
+// Login route
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+
+  // Check if user exists and password matches
+  if (email === hardcodedUser.email && password === hardcodedUser.password) {
+      res.json({ id: hardcodedUser.id, email: hardcodedUser.email, name: hardcodedUser.name });
+  } else {
+      res.status(400).json({ message: 'Invalid credentials' });
+  }
+});
 
 
 

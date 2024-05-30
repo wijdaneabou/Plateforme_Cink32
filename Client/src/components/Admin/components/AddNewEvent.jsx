@@ -2,16 +2,15 @@ import { useState, useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaCamera } from "react-icons/fa";
 import axios from 'axios';
-import '../../styles/Admin/_AddNewEvent.scss';
+import '../styles/_AddNewEvent.scss';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './Header';
 
 const AddNewEvent = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Modification de l'utilisation
   const { isEditMode, event } = location.state || {};
-
   const [eventName, setEventName] = useState('');
   const [locationName, setLocationName] = useState('');
   const [dateStart, setDateStart] = useState('');
@@ -20,7 +19,7 @@ const AddNewEvent = () => {
   const [organizer, setOrganizer] = useState('');
   const [description, setDescription] = useState('');
   const [images, setImages] = useState([]);
-  const [uploadProgress, setUploadProgress] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (isEditMode && event) {
@@ -34,10 +33,11 @@ const AddNewEvent = () => {
       setParticipants(event.participantNumber);
       setOrganizer(event.organizerName);
       setDescription(event.description);
-      setImages(event.photos ? event.photos.map(photo => new File([photo.data], photo.originalName)) : []);
-    }
-    else {
-      // Si ce n'est pas en mode édition, réinitialise les images
+      setImages(event.photos ? event.photos.map(photo => {
+        const blob = new Blob([new Uint8Array(photo.data.data)], { type: photo.contentType });
+        return new File([blob], photo.originalName);
+      }) : []);
+    } else {
       setImages([]);
     }
   }, [isEditMode, event]);
@@ -62,11 +62,12 @@ const AddNewEvent = () => {
     setOrganizer('');
     setDescription('');
     setImages([]);
-    setUploadProgress(0);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+
     const formData = new FormData();
     formData.append('name', eventName);
     formData.append('location', locationName);
@@ -75,11 +76,11 @@ const AddNewEvent = () => {
     formData.append('participantNumber', participants);
     formData.append('description', description);
     formData.append('organizerName', organizer);
-  
+
     images.forEach((image) => {
-      formData.append('photos', image); // Assurez-vous que le champ est correctement nommé pour les images
-    })
-    
+      formData.append('photos', image);
+    });
+
     try {
       const url = isEditMode && event ? `http://localhost:3000/api/events/${event._id}` : 'http://localhost:3000/api/events';
       const method = isEditMode && event ? 'put' : 'post';
@@ -87,23 +88,21 @@ const AddNewEvent = () => {
         method,
         url,
         data: formData,
-        onUploadProgress: (progressEvent) => {
-          const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
-          setUploadProgress(progress);
-        },
       });
       toast.success(isEditMode ? 'Event updated successfully!' : 'Event created successfully!');
       resetForm();
       setTimeout(() => {
-        navigate('/events');
+        navigate('/events'); // Modification de la redirection
       }, 1000);
     } catch (error) {
       toast.error(isEditMode ? 'Failed to update event.' : 'Failed to create event.');
+    } finally {
+      setIsLoading(false);
     }
   };
-  
+
   return (
-    <div className="app">
+    <div className="app-add">
       <Header />
       <ToastContainer />
       <main>
@@ -136,13 +135,6 @@ const AddNewEvent = () => {
               onChange={handleImageChange}
               multiple
             />
-            {uploadProgress > 0 && (
-              <div className="progress-bar">
-                <div className="progress-bar-fill" style={{ width: `${uploadProgress}%` }}>
-                  {uploadProgress}%
-                </div>
-              </div>
-            )}
           </div>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -212,8 +204,8 @@ const AddNewEvent = () => {
                 placeholder="Enter event description"
               ></textarea>
             </div>
-            <button type="submit" className="submit-btn">
-              {isEditMode ? 'Update Now' : 'Add Now'}
+            <button type="submit" className="submit-btn" disabled={isLoading}>
+              {isLoading ? 'Loading...' : isEditMode ? 'Update Now' : 'Add Now'}
             </button>
           </form>
         </div>

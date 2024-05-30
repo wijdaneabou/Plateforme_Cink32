@@ -10,8 +10,8 @@ import { VscCalendar, VscDashboard } from "react-icons/vsc";
 import { LuUser2 } from "react-icons/lu";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import { US, FR, MA } from 'country-flag-icons/react/3x2';
-import '../../styles/Admin/_Header.scss';
-import logo from '../../assets/cink.png';
+import '../styles/_Header.scss';
+import logo from '../../../assets/cink.png';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
