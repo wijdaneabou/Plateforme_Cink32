@@ -2,6 +2,7 @@ import  { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/_EventsPage.scss';
+import HeaderUser from './HeaderUser';
 
 const EventsPage = () => {
   const [events, setEvents] = useState([]);
@@ -85,6 +86,7 @@ const EventsPage = () => {
   
   return (
     <div className="events-page">
+     <HeaderUser/>
       <div className="events-header">
         <h1>Events</h1>
         <p>Join our Events</p>

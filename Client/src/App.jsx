@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Admin/components/Dashboard.jsx';
 import EventDashboard from './components/Admin/components/EventDashboard.jsx';
 import AddNewEvent from './components/Admin/components/AddNewEvent.jsx';
-import EventsPage from './components/Events/components/EventsPage.jsx';
-import EventDetails from './components/Events/components/EventDetails.jsx';
+import EventsPage from './components/User/Events/components/EventsPage.jsx';
+import EventDetails from './components/User/Events/components/EventDetails.jsx';
 import ManageAccount from './components/Admin/components/ManageAccount .jsx';
 import ChangePassword from './components/Admin/components/ChangePassword.jsx';
 import Login from './components/Admin/components/login.jsx';
@@ -39,9 +39,9 @@ useEffect(() => {
     <Router>
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
-        <Route path="/events" element={<EventDashboard />} />
+        <Route path="/Devents" element={<EventDashboard />} />
         <Route path="/addevent" element={<AddNewEvent />} />
-        <Route  path="/ev" element={<EventsPage />} />
+        <Route  path="/events" element={<EventsPage />} />
         <Route path="/details/:id" element={<EventDetails />} />
         <Route path="/manage-account" element={<ManageAccount />} />
         <Route path="/change-password" element={<ChangePassword />} />
