@@ -1,0 +1,345 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* > * {
+  font-family: "Inter", sans-serif;
+    
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: white;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.google {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  width: 240px;
+  height: 40px;
+  transition: border-color 0.25s;
+  display: flex;
+  margin-left: 40px;
+  
+}
+.google p{
+  margin-left: 39px;
+  margin-top: 11px;
+  
+}
+.google:hover {
+  border-color: #646cff;
+}
+.google:focus,
+.google:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  .google {
+    background-color: #f9f9f9;
+  }
+}
+/*       */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* HeroSection.css */
+.container-background {
+  position: relative;
+  text-align: center; /* Center the text horizontally */
+  overflow: hidden;
+}
+.container-background img{
+  display: block;
+    inset: 0;
+    width: 100%;
+    object-fit: cover; /* Adjusts the size of the image to fill the container while maintaining its aspect ratio */
+    background: white;
+    height: 50%;
+}
+@keyframes movingShine {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+.container-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 200%;
+  animation: movingShine 1s linear infinite;
+}
+/*            */
+.DescriptionCINK{
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 25%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset the position by half the width and height of the element */
+  
+}
+.DescriptionCINK .BigTitle{
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  color: #0563AC;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Horizontal shadow, Vertical shadow, Blur, Shadow Color */
+  line-height: 1; /* Adjust line height to control the space between lines */
+}
+.DescriptionCINK .Description{
+  font-family: "Inter", sans-serif;
+  font-family: 16px;
+  line-height: 2;
+}
+.DescriptionCINK  .LearnMore{
+  background-color: #0563ac;
+  border-radius: 4px;
+  height: 45px;
+  width: 222.84px;
+  position: absolute;
+}
+.DescriptionCINK  .Content{
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  height: 16px;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  white-space: nowrap;
+  width: 159px;
+}
+.DescriptionCINK  .LearnMore:hover {
+  background-color: black; /* Darker shade when hovered */
+  
+}
+
+.DescriptionCINK  .Sign{
+  background-color: #EEEFF4;
+  border-radius: 4px;
+  margin-left: 250px;
+  width: 140px;
+  height: 45px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid #0563AC;
+}
+.DescriptionCINK  .Sign:hover{
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+/* Header The navBar */
+.header-section {
+  position: fixed; /* Changed from absolute to fixed */
+  width: 100%; /* Ensure it spans the full width */
+  top: 0;
+  z-index: 10; 
+}
+.header-section .scrolled {
+  background-color: white; /* Change to white when scrolled */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow when scrolled */
+}
+.header-section .overlap {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 16px;
+  z-index: 10; 
+}
+
+.header-section .logo-white-svg {
+  height: 50px;
+  left: 600px;
+  position: absolute;
+  top: 1px;
+  transform: rotate(0.5deg);
+  
+}
+
+.header-section .nav-list {
+  font-family: "Inter", sans-serif;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  
+}
+
+.header-section .item-link {
+  color: #161922;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 30px; 
+ 
+}
+.header-section .div {
+  height: 29px;
+  left: 202px;
+  position: absolute;
+  top: -1px;
+  width: 202px;
+}
+
+
+.header-section .link {
+  background-color: #0563ac;
+  border-radius: 4px;
+  height: 53px;
+  left: 1112px;
+  position: absolute;
+  top: 11px;
+  width: 118px;
+}
+.header-section .link:hover{
+  transform: scale(1.1);
+}
+.header-section .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  height: 16px;
+  left: -20px;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 19px;
+  white-space: nowrap;
+  width: 159px;
+}
+
+.header-section .link-wrapper {
+  border-radius: 4px;
+  height: 56px;
+  left: 968px;
+  position: absolute;
+  top: 11px;
+  width: 131px;
+}
+
+.header-section .div-wrapper {
+  border-radius: 4px;
+  height: 53px;
+  left: 13px;
+  position: relative;
+  width: 118px;
+}
+
+.header-section .text-wrapper-2 {
+  color: #161922;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  height: 16px;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 19px;
+  white-space: nowrap;
+  width: 159px;
+}
+.item-link {
+  margin-right: 1.5rem; /* Adjusted for better scaling */
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .nav-list {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem; /* This will replace your inline style */
+  }
+  
+  .item-link {
+    margin: 0.5rem 0; /* Stack the links vertically with spacing */
+  
+  }
+  
+  /* Adjust the logo size for smaller screens */
+  .logo-white-svg {
+    height: 40px;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .header-section {
+    flex-direction: column;
+  }
+
+  .nav-list, .link, .link-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the items on mobile */
+  }
+
+  .item-link {
+    margin: 0.5rem; /* Add some margin to each side */
+  }
+  
+  .link, .link-wrapper {
+    display: block; /* Show login/signup for mobile */
+  }
+}
+/******************************* Section 1 *****/
+
+

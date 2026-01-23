@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from 'axios';
+
 import '../styles/Form.css';
-import '../styles/index.css';
+import '../styles/_Home.scss';
 import GoogleIcon from '../assets/google.png'; 
 const GoogleButton = () => {
 

@@ -1,0 +1,70 @@
+.app-manage {
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+    margin-left: 15%;
+  }
+  
+  .input-group {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Fixed width for labels */
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .manage-account {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Adjust the gap for individual fields */
+    width: 50vw;
+  
+    h3 {
+      margin: 0;
+      font-size: 14px;
+      color: #0056b3;
+      
+    }
+  
+    label {
+      font-weight: bold;
+      font-size: 12px; /* Adjust as needed */
+    }
+  
+    input {
+      padding: 10px; /* Reduce padding */
+      font-size: 11px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  
+    .error {
+      color: red;
+      font-size: 12px;
+    }
+  
+    .message {
+      color: green;
+      font-size: 12px;
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: flex-end; /* Align button to the right */
+    }
+  
+    .update-button {
+      padding: 10px; /* Reduce padding */
+      font-size: 12px;
+      width: 10vw;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  
